@@ -1,3 +1,5 @@
+package steps;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -9,7 +11,9 @@ import java.util.Date;
 
 import org.junit.Assert;
 
+import converters.DateConverter;
 import cucumber.api.PendingException;
+import cucumber.api.Transform;
 /**
  * Estados cucumber: 
  * - undefined: não encontra aquela step
@@ -18,11 +22,9 @@ import cucumber.api.PendingException;
  * - failed: falha quando gera outra exception que não seja PendingException
  * - passed: quando um teste passa
  */
-public class CursoCucumber {
+public class CursoCucumberSteps {
 	@Given("^que criei o arquivo corretamente$")
 	public void queCrieiOArquivoCorretamente() throws Throwable {
-	    //throw new PendingException();
-		System.out.println("Passou aqui");
 	}
 
 	@When("^executa-lo$")
@@ -51,13 +53,11 @@ public class CursoCucumber {
 	
 	Date entrega = new Date();
 	
-	@Given("^que a entrega eh dia (\\d+)/(\\d+)/(\\d+)$")
-	public void que_a_entrega_eh_dia(int day, int month, int year) throws Throwable {
-		Calendar cal = Calendar.getInstance();
-		cal.set(Calendar.DAY_OF_MONTH, day);
-		cal.set(Calendar.MONTH, month-1);
-		cal.set(Calendar.YEAR, year);
-		entrega = cal.getTime();
+	//@Given("^que a entrega eh dia (\\d+)/(\\d+)/(\\d+)$")
+	@Given("^que a entrega eh dia (.*)$")
+	public void que_a_entrega_eh_dia(@Transform(DateConverter.class) Date data) throws Throwable {
+		entrega = data;
+		System.out.println(entrega);
 	}
 
 	@When("^a entrega atrasar em (\\d+) (dia|dias|mes|meses)$")
@@ -79,6 +79,35 @@ public class CursoCucumber {
 		String dataFormatada = format.format(entrega);
 		Assert.assertEquals(data, dataFormatada);
 	}
+	
+	@Given("^que o ticket( especial)? eh (A.\\d{3})$")
+	public void que_o_ticket_eh_AF(String tipo, String arg1) throws Throwable {
+		
+	}
 
+	//@Given("^que o valor da passagem eh R\\$ (\\d+),(\\d+)$")
+	@Given("^que o valor da passagem eh R\\$ (.*)$")
+	public void que_o_valor_da_passagem_eh_R$(Double numero) throws Throwable {
+		System.out.println(numero);
+	}
 
+	@Given("^que o nome do passageiro eh \"(.{5,20})\"$")
+	public void que_o_nome_do_passageiro_eh(String arg1) throws Throwable {
+		
+	}
+
+	@Given("^que o telefone do passageiro eh (9\\d{3}-\\d{4})$")
+	public void que_o_telefone_do_passageiro(int arg1, int arg2) throws Throwable {
+
+	}
+
+	@When("^criar os steps$")
+	public void criar_os_steps() throws Throwable {
+		
+	}
+
+	@Then("^o teste vai funcionar$")
+	public void o_teste_vai_funcionar() throws Throwable {
+		
+	}
 }
