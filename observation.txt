@@ -1,0 +1,4 @@
+O desenvolvimento de teste BDD passa por tres estados:
+- RED (Reprovacao de testes)
+- Green (Aprovacao de testes)
+- Refactor (Melhoria do codigo escrito)
