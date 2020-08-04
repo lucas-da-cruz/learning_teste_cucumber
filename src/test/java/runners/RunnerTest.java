@@ -23,10 +23,11 @@ import cucumber.api.junit.Cucumber;
 		//Strict é considerar um método undefined para aprovado ou não
 		strict = false,
 		//Defino o caminho das features
-		features = "src/test/resources/features/alugar_filme.feature",
+		features = "src/test/resources/features/inserir_conta.feature",
 		//Defino a minha classe de steps
-		glue = "steps"
+		glue = "steps",
 		//TAGS
+		tags = {"~@ignore"}
 		//Quando delimito por tag qual testes executar(nivel de feature e cenario)
 		//tags = "@featureDeAPrendizado"
 		//Negando
