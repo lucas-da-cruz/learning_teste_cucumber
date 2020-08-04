@@ -46,7 +46,6 @@ public class InserirContasSteps {
 			Date d = new Date();
 			String path = "target/screenshot/" + d.toString().trim() + ".jpg";
 			path = path.replaceAll(":", "");
-			System.out.println(path);
 			FileUtils.copyFile(file, new File(path));
 		} catch (IOException e) {
 			e.printStackTrace();
