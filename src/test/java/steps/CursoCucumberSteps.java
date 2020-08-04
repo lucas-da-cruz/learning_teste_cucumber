@@ -1,8 +1,5 @@
 package steps;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -11,9 +8,9 @@ import java.util.Date;
 
 import org.junit.Assert;
 
-import converters.DateConverter;
-import cucumber.api.PendingException;
-import cucumber.api.Transform;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 /**
  * Estados cucumber: 
  * - undefined: não encontra aquela step
@@ -53,9 +50,8 @@ public class CursoCucumberSteps {
 	
 	Date entrega = new Date();
 	
-	//@Given("^que a entrega eh dia (\\d+)/(\\d+)/(\\d+)$")
-	@Given("^que a entrega eh dia (.*)$")
-	public void que_a_entrega_eh_dia(@Transform(DateConverter.class) Date data) throws Throwable {
+	@Given("que a entrega eh dia {data}")
+	public void que_a_entrega_eh_dia(Date data) throws Throwable {
 		entrega = data;
 		System.out.println(entrega);
 	}

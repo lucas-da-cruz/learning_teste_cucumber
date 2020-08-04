@@ -1,21 +1,20 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "line": 6,
-        "name": "Deve inserir uma conta com sucesso",
+        "line": 9,
+        "name": "",
         "description": "",
-        "id": "cadastro-de-contas;deve-inserir-uma-conta-com-sucesso",
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 7603114600,
+              "duration": 4663245400,
               "status": "passed"
             },
-            "line": 7,
+            "line": 10,
             "name": "que estou acessando a aplicacao",
             "match": {
               "location": "InserirContasSteps.queEstouAcessandoAAplicacao()"
@@ -24,10 +23,10 @@
           },
           {
             "result": {
-              "duration": 306445500,
+              "duration": 230113900,
               "status": "passed"
             },
-            "line": 8,
+            "line": 11,
             "name": "informo o usuario \"lucas.cruz2000@hotmail.com\"",
             "match": {
               "arguments": [
@@ -42,10 +41,10 @@
           },
           {
             "result": {
-              "duration": 176617700,
+              "duration": 125294000,
               "status": "passed"
             },
-            "line": 9,
+            "line": 12,
             "name": "a senha \"123456\"",
             "match": {
               "arguments": [
@@ -60,10 +59,10 @@
           },
           {
             "result": {
-              "duration": 724288600,
+              "duration": 1389239399,
               "status": "passed"
             },
-            "line": 10,
+            "line": 13,
             "name": "seleciono entrar",
             "match": {
               "location": "InserirContasSteps.selecionoEntrar()"
@@ -72,10 +71,10 @@
           },
           {
             "result": {
-              "duration": 55908300,
+              "duration": 61554901,
               "status": "passed"
             },
-            "line": 11,
+            "line": 14,
             "name": "visualizo a pagina inicial",
             "match": {
               "location": "InserirContasSteps.visualizoAPaginaInicial()"
@@ -84,10 +83,10 @@
           },
           {
             "result": {
-              "duration": 102367000,
+              "duration": 89509201,
               "status": "passed"
             },
-            "line": 12,
+            "line": 15,
             "name": "seleciono Contas",
             "match": {
               "location": "InserirContasSteps.selecionoContas()"
@@ -96,40 +95,91 @@
           },
           {
             "result": {
-              "duration": 368681000,
+              "duration": 362628100,
               "status": "passed"
             },
-            "line": 13,
+            "line": 16,
             "name": "seleciono Adicionar",
             "match": {
               "location": "InserirContasSteps.selecionoAdicionar()"
             },
             "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-04T15:52:40.107Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1529500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InserirContasSteps.before()"
+            }
           },
           {
             "result": {
-              "duration": 144184000,
+              "duration": 124600,
               "status": "passed"
             },
-            "line": 14,
-            "name": "informo a conta \"Conta de Teste\"",
+            "match": {
+              "location": "InserirContasSteps.nextBefore()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Deve validar regras cadastro contas",
+        "description": "",
+        "id": "cadastro-de-contas;deve-validar-regras-cadastro-contas;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 366784100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InserirContasSteps.screenshot(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 690507199,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InserirContasSteps.fecharBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 153536101,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "informo a conta \"Conta de teste\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Conta de Teste",
+                  "val": "Conta de teste",
                   "offset": 17
                 }
               ],
               "location": "InserirContasSteps.informoAConta(String)"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 509339700,
+              "duration": 2429523601,
               "status": "passed"
             },
-            "line": 15,
+            "line": 20,
             "name": "seleciono Salvar",
             "match": {
               "location": "InserirContasSteps.selecionoSalvar()"
@@ -138,23 +188,462 @@
           },
           {
             "result": {
-              "duration": 39077500,
+              "duration": 58591999,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "recebo a mensagem \"Conta adicionada com sucesso!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Conta adicionada com sucesso!",
+                  "offset": 19
+                }
+              ],
+              "location": "InserirContasSteps.receboAMensagem(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@funcionais"
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4803094100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que estou acessando a aplicacao",
+            "match": {
+              "location": "InserirContasSteps.queEstouAcessandoAAplicacao()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 242427801,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "informo o usuario \"lucas.cruz2000@hotmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "lucas.cruz2000@hotmail.com",
+                  "offset": 19
+                }
+              ],
+              "location": "InserirContasSteps.informoOUsuario(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 125906600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "a senha \"123456\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "123456",
+                  "offset": 9
+                }
+              ],
+              "location": "InserirContasSteps.aSenha(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 939531500,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "seleciono entrar",
+            "match": {
+              "location": "InserirContasSteps.selecionoEntrar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 46896899,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "visualizo a pagina inicial",
+            "match": {
+              "location": "InserirContasSteps.visualizoAPaginaInicial()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 86331800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "seleciono Contas",
+            "match": {
+              "location": "InserirContasSteps.selecionoContas()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 390350200,
               "status": "passed"
             },
             "line": 16,
-            "name": "a conta eh inserida com sucesso",
+            "name": "seleciono Adicionar",
             "match": {
-              "location": "InserirContasSteps.aContaEhInseridaComSucesso()"
+              "location": "InserirContasSteps.selecionoAdicionar()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-04T15:52:50.786Z",
+        "before": [
+          {
+            "result": {
+              "duration": 371600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InserirContasSteps.before()"
+            }
+          },
+          {
+            "result": {
+              "duration": 326800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InserirContasSteps.nextBefore()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Deve validar regras cadastro contas",
+        "description": "",
+        "id": "cadastro-de-contas;deve-validar-regras-cadastro-contas;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 330497100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InserirContasSteps.screenshot(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 688891000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InserirContasSteps.fecharBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 98008701,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "informo a conta \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "",
+                  "offset": 17
+                }
+              ],
+              "location": "InserirContasSteps.informoAConta(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 462845501,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "seleciono Salvar",
+            "match": {
+              "location": "InserirContasSteps.selecionoSalvar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 58993800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "recebo a mensagem \"Informe o nome da conta\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Informe o nome da conta",
+                  "offset": 19
+                }
+              ],
+              "location": "InserirContasSteps.receboAMensagem(String)"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@funcionais"
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4573839600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que estou acessando a aplicacao",
+            "match": {
+              "location": "InserirContasSteps.queEstouAcessandoAAplicacao()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 218306000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "informo o usuario \"lucas.cruz2000@hotmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "lucas.cruz2000@hotmail.com",
+                  "offset": 19
+                }
+              ],
+              "location": "InserirContasSteps.informoOUsuario(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 127980200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "a senha \"123456\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "123456",
+                  "offset": 9
+                }
+              ],
+              "location": "InserirContasSteps.aSenha(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 655479400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "seleciono entrar",
+            "match": {
+              "location": "InserirContasSteps.selecionoEntrar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 59539599,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "visualizo a pagina inicial",
+            "match": {
+              "location": "InserirContasSteps.visualizoAPaginaInicial()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 97953599,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "seleciono Contas",
+            "match": {
+              "location": "InserirContasSteps.selecionoContas()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 337321601,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "seleciono Adicionar",
+            "match": {
+              "location": "InserirContasSteps.selecionoAdicionar()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-08-04T15:52:59.075Z",
+        "before": [
+          {
+            "result": {
+              "duration": 330401,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InserirContasSteps.before()"
+            }
+          },
+          {
+            "result": {
+              "duration": 133700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InserirContasSteps.nextBefore()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Deve validar regras cadastro contas",
+        "description": "",
+        "id": "cadastro-de-contas;deve-validar-regras-cadastro-contas;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 350513600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InserirContasSteps.screenshot(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 697061199,
+              "status": "passed"
+            },
+            "match": {
+              "location": "InserirContasSteps.fecharBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 137766201,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "informo a conta \"Conta de teste\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Conta de teste",
+                  "offset": 17
+                }
+              ],
+              "location": "InserirContasSteps.informoAConta(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 562179900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "seleciono Salvar",
+            "match": {
+              "location": "InserirContasSteps.selecionoSalvar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 50976299,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "recebo a mensagem \"Ja existe uma conta com esse nome!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ja existe uma conta com esse nome!",
+                  "offset": 19
+                }
+              ],
+              "location": "InserirContasSteps.receboAMensagem(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@funcionais"
           }
         ]
       }
     ],
     "name": "Cadastro de contas",
-    "description": "Como um usuario\r\nGostaria de cadastrar contas\r\nPara que eu possa distribuir meu dinheiro de uma forma mais organizada",
+    "description": "Como um usuario\nGostaria de cadastrar contas\nPara que eu possa distribuir meu dinheiro de uma forma mais organizada",
     "id": "cadastro-de-contas",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/inserir_conta.feature"
+    "uri": "file:src/test/resources/features/inserir_conta.feature",
+    "tags": [
+      {
+        "name": "@funcionais",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

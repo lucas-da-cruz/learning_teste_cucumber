@@ -1,9 +1,12 @@
+@funcionais
 Feature: Cadastro de contas
 Como um usuario
 Gostaria de cadastrar contas
 Para que eu possa distribuir meu dinheiro de uma forma mais organizada
 
-Scenario: Deve inserir uma conta com sucesso
+#Posso adicionar no background todas as etapas que eu tenho que são comum
+#em todos os meus cenários de teste
+Background:
 	Given que estou acessando a aplicacao
 	When informo o usuario "lucas.cruz2000@hotmail.com"
 	And a senha "123456"
@@ -11,31 +14,13 @@ Scenario: Deve inserir uma conta com sucesso
 	Then visualizo a pagina inicial
 	When seleciono Contas
 	And seleciono Adicionar
-	And informo a conta "Conta de Teste"
-	And seleciono Salvar
-	Then a conta eh inserida com sucesso
 
-@ignore
-Scenario: Nao deve inserir uma conta sem nome
-	Given que estou acessando a aplicacao
-	When informo o usuario "lucas.cruz2000@hotmail.com"
-	And a senha "123456"
-	And seleciono entrar
-	Then visualizo a pagina inicial
-	When seleciono Contas
-	And seleciono Adicionar
+Scenario Outline: Deve validar regras cadastro contas
+	When informo a conta "<conta>"
 	And seleciono Salvar
-	Then sou notificar que o nome da conta eh obrigatorio
-
-@ignore
-Scenario: Nao deve inserir uma conta com nome ja existente
-	Given que estou acessando a aplicacao
-	When informo o usuario "lucas.cruz2000@hotmail.com"
-	And a senha "123456"
-	And seleciono entrar
-	Then visualizo a pagina inicial
-	When seleciono Contas
-	And seleciono Adicionar
-	And informo a conta "Conta de Teste"
-	And seleciono Salvar
-	Then sou notificado que ja existe uma conta com esse nome
+	Then recebo a mensagem "<mensagem>"
+	Examples:
+		|          conta             |              mensagem              |
+		|       Conta de teste       |    Conta adicionada com sucesso!   |
+		|                            |        Informe o nome da conta     |
+		|       Conta de teste       | Ja existe uma conta com esse nome! |

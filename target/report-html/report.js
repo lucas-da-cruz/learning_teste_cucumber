@@ -1,155 +1,441 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/inserir_conta.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/inserir_conta.feature");
 formatter.feature({
-  "line": 1,
   "name": "Cadastro de contas",
-  "description": "Como um usuario\r\nGostaria de cadastrar contas\r\nPara que eu possa distribuir meu dinheiro de uma forma mais organizada",
-  "id": "cadastro-de-contas",
-  "keyword": "Feature"
+  "description": "Como um usuario\nGostaria de cadastrar contas\nPara que eu possa distribuir meu dinheiro de uma forma mais organizada",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@funcionais"
+    }
+  ]
 });
-formatter.scenario({
-  "line": 6,
-  "name": "Deve inserir uma conta com sucesso",
+formatter.scenarioOutline({
+  "name": "Deve validar regras cadastro contas",
   "description": "",
-  "id": "cadastro-de-contas;deve-inserir-uma-conta-com-sucesso",
-  "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 7,
-  "name": "que estou acessando a aplicacao",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 8,
-  "name": "informo o usuario \"lucas.cruz2000@hotmail.com\"",
+  "name": "informo a conta \"\u003cconta\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 9,
-  "name": "a senha \"123456\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 10,
-  "name": "seleciono entrar",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 11,
-  "name": "visualizo a pagina inicial",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 12,
-  "name": "seleciono Contas",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 13,
-  "name": "seleciono Adicionar",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 14,
-  "name": "informo a conta \"Conta de Teste\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 15,
   "name": "seleciono Salvar",
   "keyword": "And "
 });
 formatter.step({
-  "line": 16,
-  "name": "a conta eh inserida com sucesso",
+  "name": "recebo a mensagem \"\u003cmensagem\u003e\"",
   "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "conta",
+        "mensagem"
+      ]
+    },
+    {
+      "cells": [
+        "Conta de teste",
+        "Conta adicionada com sucesso!"
+      ]
+    },
+    {
+      "cells": [
+        "",
+        "Informe o nome da conta"
+      ]
+    },
+    {
+      "cells": [
+        "Conta de teste",
+        "Ja existe uma conta com esse nome!"
+      ]
+    }
+  ]
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "que estou acessando a aplicacao",
+  "keyword": "Given "
 });
 formatter.match({
   "location": "InserirContasSteps.queEstouAcessandoAAplicacao()"
 });
 formatter.result({
-  "duration": 7603114600,
   "status": "passed"
 });
+formatter.step({
+  "name": "informo o usuario \"lucas.cruz2000@hotmail.com\"",
+  "keyword": "When "
+});
 formatter.match({
-  "arguments": [
-    {
-      "val": "lucas.cruz2000@hotmail.com",
-      "offset": 19
-    }
-  ],
   "location": "InserirContasSteps.informoOUsuario(String)"
 });
 formatter.result({
-  "duration": 306445500,
   "status": "passed"
 });
+formatter.step({
+  "name": "a senha \"123456\"",
+  "keyword": "And "
+});
 formatter.match({
-  "arguments": [
-    {
-      "val": "123456",
-      "offset": 9
-    }
-  ],
   "location": "InserirContasSteps.aSenha(String)"
 });
 formatter.result({
-  "duration": 176617700,
   "status": "passed"
+});
+formatter.step({
+  "name": "seleciono entrar",
+  "keyword": "And "
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoEntrar()"
 });
 formatter.result({
-  "duration": 724288600,
   "status": "passed"
+});
+formatter.step({
+  "name": "visualizo a pagina inicial",
+  "keyword": "Then "
 });
 formatter.match({
   "location": "InserirContasSteps.visualizoAPaginaInicial()"
 });
 formatter.result({
-  "duration": 55908300,
   "status": "passed"
+});
+formatter.step({
+  "name": "seleciono Contas",
+  "keyword": "When "
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoContas()"
 });
 formatter.result({
-  "duration": 102367000,
   "status": "passed"
+});
+formatter.step({
+  "name": "seleciono Adicionar",
+  "keyword": "And "
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoAdicionar()"
 });
 formatter.result({
-  "duration": 368681000,
   "status": "passed"
 });
-formatter.match({
-  "arguments": [
+formatter.scenario({
+  "name": "Deve validar regras cadastro contas",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
     {
-      "val": "Conta de Teste",
-      "offset": 17
+      "name": "@funcionais"
     }
-  ],
+  ]
+});
+formatter.step({
+  "name": "informo a conta \"Conta de teste\"",
+  "keyword": "When "
+});
+formatter.match({
   "location": "InserirContasSteps.informoAConta(String)"
 });
 formatter.result({
-  "duration": 144184000,
   "status": "passed"
+});
+formatter.step({
+  "name": "seleciono Salvar",
+  "keyword": "And "
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoSalvar()"
 });
 formatter.result({
-  "duration": 509339700,
   "status": "passed"
 });
+formatter.step({
+  "name": "recebo a mensagem \"Conta adicionada com sucesso!\"",
+  "keyword": "Then "
+});
 formatter.match({
-  "location": "InserirContasSteps.aContaEhInseridaComSucesso()"
+  "location": "InserirContasSteps.receboAMensagem(String)"
 });
 formatter.result({
-  "duration": 39077500,
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "que estou acessando a aplicacao",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "InserirContasSteps.queEstouAcessandoAAplicacao()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "informo o usuario \"lucas.cruz2000@hotmail.com\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "InserirContasSteps.informoOUsuario(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "a senha \"123456\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InserirContasSteps.aSenha(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "seleciono entrar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InserirContasSteps.selecionoEntrar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "visualizo a pagina inicial",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "InserirContasSteps.visualizoAPaginaInicial()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "seleciono Contas",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "InserirContasSteps.selecionoContas()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "seleciono Adicionar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InserirContasSteps.selecionoAdicionar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Deve validar regras cadastro contas",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@funcionais"
+    }
+  ]
+});
+formatter.step({
+  "name": "informo a conta \"\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "InserirContasSteps.informoAConta(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "seleciono Salvar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InserirContasSteps.selecionoSalvar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "recebo a mensagem \"Informe o nome da conta\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "InserirContasSteps.receboAMensagem(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "que estou acessando a aplicacao",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "InserirContasSteps.queEstouAcessandoAAplicacao()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "informo o usuario \"lucas.cruz2000@hotmail.com\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "InserirContasSteps.informoOUsuario(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "a senha \"123456\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InserirContasSteps.aSenha(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "seleciono entrar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InserirContasSteps.selecionoEntrar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "visualizo a pagina inicial",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "InserirContasSteps.visualizoAPaginaInicial()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "seleciono Contas",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "InserirContasSteps.selecionoContas()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "seleciono Adicionar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InserirContasSteps.selecionoAdicionar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Deve validar regras cadastro contas",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@funcionais"
+    }
+  ]
+});
+formatter.step({
+  "name": "informo a conta \"Conta de teste\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "InserirContasSteps.informoAConta(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "seleciono Salvar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InserirContasSteps.selecionoSalvar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "recebo a mensagem \"Ja existe uma conta com esse nome!\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "InserirContasSteps.receboAMensagem(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.after({
   "status": "passed"
 });
 });

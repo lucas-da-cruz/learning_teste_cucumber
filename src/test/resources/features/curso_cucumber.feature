@@ -1,4 +1,4 @@
-@featureDeAPrendizado
+@unitarios
 Feature: Aprender cucumber
   Como um aluno
   Eu quero aprender a utilizar cucumber
@@ -58,7 +58,6 @@ Scenario: Deve negar todos os steps "Dado" dos cenarios anteriores
     Given que o nome do passageiro eh "Beltrano Souza Matos de Alcantara Azevedo"
     Given que o telefone do passageiro eh 1234-5678
     Given que o telefone do passageiro eh 999-2223
-
 
 #Exemplo com AND e BUT
 @Ignore

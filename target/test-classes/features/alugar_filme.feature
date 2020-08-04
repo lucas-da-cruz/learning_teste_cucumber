@@ -1,3 +1,4 @@
+@unitarios
 Feature: Alugar filme
   Como usuario
   Eu quero cadastrar alugueis de filmes

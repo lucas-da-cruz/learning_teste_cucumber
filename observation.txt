@@ -2,3 +2,12 @@ O desenvolvimento de teste BDD passa por tres estados:
 - RED (Reprovacao de testes)
 - Green (Aprovacao de testes)
 - Refactor (Melhoria do codigo escrito)
+
+Existem dois tipos de cenários, os imperativos e o declarativos
+Os declarativos são mais recomendados, pois ele foca no negócio e
+não em etapa por etapa do processo da aplicação.
+
+Os imperativos ajudam bastante também, pois ajudam muito novos integrantes
+a entender o processo, porém estão sempre ligada com a interface do sistema,
+demanda frequentes alterações.
+

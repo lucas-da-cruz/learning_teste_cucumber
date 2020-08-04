@@ -1,7 +1,5 @@
 package services;
 
-import java.util.Calendar;
-
 import entity.Filme;
 import entity.NotaAluguel;
 import entity.TipoAluguel;
